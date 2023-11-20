@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discount__c</fullName>
+    <externalId>false</externalId>
+    <label>Offer</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Value does not exist or does not match filter criteria.</errorMessage>
+        <filterItems>
+            <field>Coupon__c.Expired__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </filterItems>
+        <infoMessage>If the Expired Field is TRUE (Checked), these data don&apos;t show to the users with this filter.</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Coupon__c</referenceTo>
+    <relationshipLabel>Product Offers</relationshipLabel>
+    <relationshipName>Product_Offers</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

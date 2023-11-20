@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Type_Flat_Field_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(ISPICKVAL(Type__c, &quot;Flat&quot;), 
+    IF(ISBLANK(Flat_Discount__c), true, false),
+    false
+)</errorConditionFormula>
+    <errorDisplayField>Flat_Discount__c</errorDisplayField>
+    <errorMessage>If the type is flat this field must be filled.</errorMessage>
+</ValidationRule>

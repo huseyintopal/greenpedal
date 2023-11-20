@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Type_Percentage_Field_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(ISPICKVAL(Type__c, &quot;Percentage&quot;), 
+    IF(ISBLANK( Discount__c), true, false),
+    false
+)</errorConditionFormula>
+    <errorDisplayField>Discount__c</errorDisplayField>
+    <errorMessage>If the type is percentage the discount field must be filled</errorMessage>
+</ValidationRule>

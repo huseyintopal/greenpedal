@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Image_Type_is_Selected_as_None</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Type__c , &apos;None&apos;) , NOT( ISBLANK( ResourceURL__c ) ) ||  NOT( ISBLANK( StaticResource__c ) ) ||  NOT( ISBLANK( URL__c ) ))</errorConditionFormula>
+    <errorMessage>Static Resource, Resource URL, and URL must be left blank if the Image Type is selected as None on the product Image record.</errorMessage>
+</ValidationRule>

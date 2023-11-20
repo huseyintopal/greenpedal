@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Type_Selected_Static_Resource</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Type__c , &apos;Static Resource&apos;),  OR(ISBLANK( ResourceURL__c )  , ISBLANK( StaticResource__c)))</errorConditionFormula>
+    <errorMessage>If the image type is selected Static Resource, the Resource URL and Static Resource field must be filled.</errorMessage>
+</ValidationRule>
