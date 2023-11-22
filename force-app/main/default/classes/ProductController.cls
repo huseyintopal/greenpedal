@@ -116,7 +116,7 @@ public class ProductController {
 
           return Database.query(
             'SELECT Id, Name, Category__c, Category__r.Name, Product__c, Product__r.Name, Product__r.Description, Product__r.RemainingQuantity__c ' +
-            'FROM ProductCategory__c' +
+            'FROM Product_Category__c' +
             whereClause +
             ' ORDER BY Name LIMIT 100');
     }
